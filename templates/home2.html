@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <style>
+      body{
+        overflow: hidden;
+      }
+
+        .parent-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    flex-direction: column;
+    /* background-color: white; */
+    /* background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44); */
+  
+    /* background-image: linear-gradient(
+      to left,
+      #d32787,
+      #c6199e,
+      #ad1fb8,
+      #8331d2,
+      #1243eb
+    ); */
+  
+    /* background-image: linear-gradient(
+      to right top,
+      #005dff,
+      #4856fd,
+      #684efb,
+      #8045f7,
+      #9638f2,
+      #a530ec,
+      #b226e6,
+      #be1ae0,
+      #c819d9,
+      #d11ad3,
+      #d91ccd,
+      #e021c7
+    ); */
+  
+    background-image: linear-gradient(
+      to right bottom,
+      #fb3f94,
+      #ff4a85,
+      #ff5677,
+      #ff646c,
+      #ff7162,
+      #ff6f63,
+      #ff6e63,
+      #ff6c64,
+      #ff5a71,
+      #ff4881,
+      #fe3894,
+      #f32daa
+    );
+    /*height as 100% means that the content will be set as the height of the child elements combined 
+   and no child elements will overflow outside the parent div*/
+  
+    height: 100vh; /*sets the height of the div as the height of the window*/
+    margin-bottom: 0px;
+  }
+  
+  .child-div {
+    background-color: white;
+    height: 350px;
+    width: 650px;
+    border-radius: 20px;
+    /* box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.2),
+      10px 10px 10px rgba(0, 0, 0, 0.1); */
+  
+    box-shadow: 2px 4px 15px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+    /*Aligning items in the center*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* .child-div:hover {
+    box-shadow: none;
+    border: solid 0.5px black;
+  } */
+  
+  .menubar {
+    position: sticky;
+    background-color: black;
+    color: white;
+    height: 8vh;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .but {
+    height: 50px;
+    width: 200px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    margin-left: 25px;
+    color: white;
+    border: none;
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.2),
+      10px 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-box {
+    background-color: #fff;
+    height: 50px;
+    border-radius: 40px;
+    padding: 10px;
+    width: 600px;
+    border: solid 0.5px rgb(192, 185, 185);
+  }
+  
+  .input_box {
+    border: none;
+    outline: none;
+    background: none;
+    float: left;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .but1 {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch; */
+    float: right;
+    text-decoration: none;
+    width: 40px;
+    height: 30px;
+  
+    text-align: center;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  input[type="text"] {
+    width: 530px;
+    text-overflow: ellipsis;
+  }
+  
+  .search-box:hover {
+    box-shadow: 0px 1px 15px rgb(192, 185, 185);
+    border: none;
+  }
+  
+  .input_box:hover {
+    font-size: 21px;
+    transition-duration: 0.5s;
+  }
+  
+  .search-box:hover .input_box {
+    font-size: 20px;
+    transition-duration: 0.2s;
+  }
+  
+  footer {
+    background-color: rgb(49, 47, 47);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.7;
+    /* height: 3vh; */
+    color: white;
+    padding: 5px;
+  }
+
+  .dark-mode{
+	filter: invert(1) hue-rotate(180deg)
+}
+.invert{
+	filter: invert(1) hue-rotate(180deg)
+}
+  
+    </style>
+
+</head>
+    <!-- <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <style>
+            body{
+                background-color: rgb(3,65,65);
+            }
+
+            .container-lg{
+                width: 70%;
+                height: 450px;
+                color: rgb(19,19,19);
+                background-color: rgb(247,247,247);
+                border-radius: 20px;
+            }
+            .heading{
+                text-align: center;
+                padding-top: 50px;
+                margin-top: 50px;
+                font-weight: bold;
+            }
+            #inp{
+                display: flex;
+                height: 80px;
+                width: 600px;
+                /* margin-left: 205px; */
+                margin-top: 30px;
+                border: 0px;
+                padding: 20px;
+                box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
+            }
+
+            #btn{
+                margin-top: 30px;
+                height: 50px;
+                width: 150px;
+            }
+
+            .form{
+                text-align: center;
+            }
+
+            .output{
+                text-align: center;
+                margin-top: 50px;
+                font-size: 50px;
+            }
+
+
+        </style>
+
+    </head> -->
+    <body>
+
+      <div style="position: fixed;z-index: 999;top: 100px;left: 20px;"><button onclick="myFunction()" style="background: none;border: none;color: white;">click</button></div>
+	<!-- <div class="cursor"></div> -->
+
+        <!-- <div class="container">
+            <div class="container-lg">
+                <center><h1 style="margin-top: 130px;padding-top: 50px;"> Sentiment Analysis </h1></center>
+
+                <form method="POST" class="form">
+                    <center><input type="text" name="inp" placeholder="Enter a sentence" id="inp" autocomplete="off"></center>
+                    <input type="submit" name="submit" id="btn" class="btn btn-primary">
+                </form>
+
+                <h1 class="output">{{message}}</h1>
+            </div>
+        </div> -->
+
+        <div class="container-fluid menubar mt-0" id="menubar" style="text-align: center;font-size: 30px;padding: 5px;">Senti</div> 
+    <div class="papa">
+    <div class="parent-div" id="parent-div"> 
+
+    <!-- <div class="buttons">
+        <button class="bg-primary but">Search Sentiment</button>
+        &nbsp;
+        <button class="bg-primary but">Search Hashtag</button>
+    </div> -->
+
+        <br>
+        
+       
+        <div class="child-div" id="child-div">
+            <br><br><br>
+
+            <h2>Search Sentiment</h2>
+            
+            <br>
+
+            
+            
+            <div class="search-box">
+
+                <form method="POST" class="form">
+                    <input type="text" id="inp" class="input_box" name="inp" placeholder="Search" autocomplete="off">
+                    
+                    <button style="background: none;color: inherit;border: none;padding: 0;font: inherit;cursor: pointer;outline: inherit;" id="btn" name="submit" type="submit">
+                        <a class="but1" href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </button>
+                </form>
+            </div>
+
+
+            <br>
+            <h2 class="output">{{message}}</h2>
+            
+            <br><br><br><br><br>
+
+        </div>
+        <!-- <h1></h1> -->
+        <br>
+        <br>
+        <br>
+    </div>
+    </div> 
+
+    <footer>Copyright &copy; Site by Jugal Senjaliya, Suzanne Samuel, Smit Patel</footer>
+
+    </body>
+</html>
