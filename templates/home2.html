@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 
     <style>
       body{
@@ -197,11 +197,11 @@
   }
 
   .dark-mode{
-	filter: invert(1) hue-rotate(180deg)
-}
-.invert{
-	filter: invert(1) hue-rotate(180deg)
-}
+	  filter: invert(1) hue-rotate(180deg);
+  }
+  .invert{
+    filter: invert(1) hue-rotate(180deg);
+  }
   
     </style>
 
@@ -260,7 +260,7 @@
     </head> -->
     <body>
 
-      <div style="position: fixed;z-index: 999;top: 100px;left: 20px;"><button onclick="myFunction()" style="background: none;border: none;color: white;">click</button></div>
+      <div style="position: fixed;z-index: 999;top: 100px;left: 20px;"><button onclick="myFunction()" style="height: 25px;width: 25px;background-color: rgb(0, 0, 0);border-radius: 50%;"></button></div>
 	<!-- <div class="cursor"></div> -->
 
         <!-- <div class="container">
@@ -328,4 +328,32 @@
     <footer>Copyright &copy; Site by Jugal Senjaliya, Suzanne Samuel, Smit Patel</footer>
 
     </body>
+
+    <script>
+      function myFunction() {
+	      var element = document.body;
+	      element.classList.toggle("dark-mode");
+
+      // if($('#picture').attr('src') == 'img/4883637.png')
+      // 	$('#picture').attr('src', 'img/night-mode-2-475098.png');
+      // else
+      // 	$('#picture').attr('src', 'img/4883637.png');
+
+      document.querySelectorAll('.parent-div').forEach((result) =>{
+      	result.classList.toggle('invert');
+      })
+      document.querySelectorAll('.child-div').forEach((result) =>{
+      	result.classList.toggle('invert');
+      })
+      // document.querySelectorAll('.ourtechimg').forEach((result) =>{
+      // 	if(result.style.border == '80px solid rgb(236, 236, 236)'){
+      // 		result.style.border = '80px solid rgb(43, 42, 42)'
+      // 	}
+
+      // 	else{
+      // 		result.style.border = '80px solid rgb(236, 236, 236)'
+      // 	}
+      // })
+        }
+    </script>
 </html>
