@@ -1,4 +1,5 @@
 # source venv/bin/activate
+# cd Desktop/Mini\ Project/Website/demo/
 
 from flask import Flask, render_template, request
 
@@ -56,6 +57,7 @@ if __name__ == '__main__':
 # 		my_prediction = clf.predict(vect)
 # 		if my_prediction==1:
 # 			return render_template('home3.html',prediction = "Positive")
-# 		else:
+
+#        else:
 # 			return render_template('home3.html',prediction = "Negative")
 # 	return render_template('home3.html')
